@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  n8n:
+    #image: n8nio/n8n:latest
+    build: .
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      # expose n8n on http://localhost:5678
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=${N8N_USER:-admin}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD:-supersecret}
+      # adjust timezone if needed:
+      - TZ=America/Argentina/Cordoba
+      - NODE_FUNCTION_ALLOW_EXTERNAL=youtube-transcript-api
+      #- PYTHON_MODULES=youtube_transcript_api,pandas
+      # other env vars you commonly use:
+      # - N8N_HOST=your.domain.com
+      # - N8N_PROTOCOL=https
+      # - WEBHOOK_URL=https://your.domain.com/
+    volumes:
+      - /home/frank/.n8n:/home/node/.n8n
+      - ./shared:/data/shared
+

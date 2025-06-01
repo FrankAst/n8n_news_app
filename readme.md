@@ -32,60 +32,13 @@ YouTube Channels → Transcript Extraction → AI Analysis → Telegram Delivery
 
 The workflow focuses on economics and cryptocurrency content, filtering and synthesizing information to provide valuable insights without the noise.
 
-## 🚀 Deployment
 
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd n8n-crypto-analyzer
-   ```
-
-2. **Build and run with Docker Compose**
-   ```bash
-   docker-compose up -d
-   ```
-
-3. **Access n8n interface**
-   ```
-   http://localhost:5678
-   ```
-
-### Production Deployment (Render)
+### 🚀 Production Deployment (Render)
 
 This project is deployed on Render with:
 - **Web Service** - Running the n8n application
 - **PostgreSQL Database** - For workflow and credential storage
 - **Environment Variables** - Secure credential management
-
-## 🔧 Configuration
-
-### Required Environment Variables
-
-```env
-# Database Configuration
-DB_TYPE=postgresdb
-DB_POSTGRESDB_HOST=your-postgres-host
-DB_POSTGRESDB_DATABASE=your-database
-DB_POSTGRESDB_USER=your-username
-DB_POSTGRESDB_PASSWORD=your-password
-DB_POSTGRESDB_PORT=5432
-
-# Authentication
-N8N_BASIC_AUTH_ACTIVE=true
-N8N_BASIC_AUTH_USER=admin
-N8N_BASIC_AUTH_PASSWORD=your-secure-password
-
-# Regional Settings
-TZ=America/Argentina/Cordoba
-
-# Custom Modules
-NODE_FUNCTION_ALLOW_EXTERNAL=youtube-transcript-api
-
-# Webhook Configuration
-WEBHOOK_URL=https://your-render-service.onrender.com
-```
 
 ### Required Credentials (Set in n8n)
 
@@ -121,19 +74,22 @@ This is a personal automation project, but feel free to:
 - Adapt the workflow for different content themes
 - Suggest improvements or optimizations
 
-## 📄 License
-
-This project is for educational and personal use. Ensure compliance with:
-- YouTube Terms of Service
-- OpenAI Usage Policies
-- Telegram Bot Guidelines
-
 ## 🔗 Resources
 
 - [n8n Documentation](https://docs.n8n.io/)
 - [OpenAI API Documentation](https://platform.openai.com/docs)
 - [Telegram Bot API](https://core.telegram.org/bots/api)
 - [YouTube Data API](https://developers.google.com/youtube/v3)
+
+## 📰 Youtube channels:
+- [Krown Crypto Cave](https://www.youtube.com/@EricKrownCrypto)
+- [Coin Bureau](https://www.youtube.com/@CoinBureau)
+- [Morning Brew Daily](https://www.youtube.com/@MorningBrewDailyShow)
+- [Federal Reserve official channel](https://www.youtube.com/@federalreserve/videos)
+- [Ark Invest - Kathie Woods](https://www.youtube.com/@ARKInvest2015)
+- [Real Vision](https://www.youtube.com/@RealVisionFinance)
+- [Chainlink - official channel](https://www.youtube.com/@chainlink)
+
 
 ---
 

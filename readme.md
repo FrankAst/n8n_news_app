@@ -22,10 +22,10 @@ Check out the live results: **[Telegram Channel](https://t.me/n8n_crypto)**
 - **OpenAI GPT-4o-mini** - For content analysis and synthesis
 - **Telegram Bot API** - For message delivery
 - **Docker** - Containerized deployment
-- **Cron-job** - Wakes up dormant Render web-service*
+- **Cron-job** - Wakes up dormant Render web-service'*
 - **Render** - Cloud hosting platform
 
-* Render free tiers puts the web-service into a dormant state causing internal n8n schedule trigger to never activate, so by pinging the web service from an external service wakes it up and n8n scheduler can work in the following 15 min. 
+'* Render free tiers puts the web-service into a dormant state causing internal n8n schedule trigger to never activate, so by pinging the web service from an external service wakes it up and n8n scheduler can work in the following 15 min. 
 
 ## 🏗 Architecture
 
